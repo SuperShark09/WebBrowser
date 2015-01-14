@@ -1,4 +1,4 @@
-#Wen Browser
+#Web Browser
 
 ####Features
 * Bookmarks
