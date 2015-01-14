@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+    android:id="@+id/urlBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    >
+    
+<HorizontalScrollView
+    android:id="@+id/tabScroll"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    android:scrollbars="horizontal|none" 
+    android:fadingEdge="none">
+
+    <LinearLayout
+        android:id="@+id/Layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/newTab"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/new_tab" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</HorizontalScrollView>
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+		android:layout_below="@id/tabScroll"
+        android:background="@drawable/bar" >
+
+        <ImageView
+            android:id="@+id/options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/options" />
+
+        <ImageView
+            android:id="@+id/exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/exit" />
+
+        <ImageView
+            android:id="@+id/forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/exit"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/forward" />
+<RelativeLayout
+    android:id="@+id/refreshLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_toRightOf="@+id/forward">
+        <ImageView
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/refresh" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:indeterminate="true"
+           />
+</RelativeLayout>
+
+        <MultiAutoCompleteTextView
+            android:id="@+id/enterUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/options"
+            android:layout_toRightOf="@+id/refreshLayout"
+            android:background="@drawable/book"
+            android:ems="10"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionGo"
+            android:inputType="textUri"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:singleLine="true"
+            android:textColor="@color/dark" />
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/urlBar" >
+    
+        </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:indeterminate="false"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/progress"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" 
+        android:maxHeight="5dp"
+        android:minHeight="5dp"/>
+    
+</RelativeLayout>
